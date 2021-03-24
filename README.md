@@ -1,2 +1,2 @@
-# android_newsApp
+# NEWS
 implementation architecture MVVM with minimal dependencies
