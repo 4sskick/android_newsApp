@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewsApp">
 
-
         <activity android:name=".ui.act.main.MainActivity">
             <intent-filter>
 
