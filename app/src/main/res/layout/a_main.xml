@@ -7,8 +7,26 @@
     tools:context=".ui.act.main.MainActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_bottom"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="?attr/background_color"/>
+        android:background="?attr/background_color"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <fragment
+        android:id="@+id/nav_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@+id/nav_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/main_nav_graph" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
