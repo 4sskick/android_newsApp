@@ -1,14 +1,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.NewsApp" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/primaryColor</item>
-        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
-        <item name="colorAccent">@color/accentColor</item>
+<!--    <style name="Theme.NewsApp" parent="Theme.AppCompat.Light.NoActionBar">-->
+<!--    <style name="Theme.NewsApp" parent="Theme.AppCompat.DayNight.NoActionBar">-->
+<!--        <item name="colorPrimary">@color/primaryColor</item>-->
+<!--        <item name="colorPrimaryDark">@color/primaryDarkColor</item>-->
+<!--        <item name="colorAccent">@color/accentColor</item>-->
 
-        <!--self declare-->
-        <item name="text_color" >@color/light_text_color</item>
-        <item name="background_color">@color/light_bg_color</item>
-        <item name="text_hint_color">@color/dark_icon_tint_color</item>
+<!--        &lt;!&ndash;self declare&ndash;&gt;-->
+<!--        <item name="text_color" >@color/light_text_color</item>-->
+<!--        <item name="background_color">@color/light_bg_color</item>-->
+<!--        <item name="text_hint_color">@color/dark_icon_tint_color</item>-->
 
-    </style>
+<!--    </style>-->
 </resources>

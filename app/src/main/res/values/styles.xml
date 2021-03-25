@@ -1,0 +1,30 @@
+<resources>
+    <!-- Base application theme. -->
+    <!--    <style name="Theme.NewsApp" parent="Theme.AppCompat.Light.NoActionBar">-->
+    <style name="Theme.NewsApp" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/accentColor</item>
+
+        <!--self declare-->
+        <item name="text_color" >@color/light_text_color</item>
+        <item name="background_color">@color/light_bg_color</item>
+        <item name="text_hint_color">@color/dark_icon_tint_color</item>
+
+    </style>
+
+    <!--    here we define dark theme style -->
+    <!--    <style name="DarkTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+    <style name="Theme.NewsApp.Dark" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/dark_primary_dark_color</item>
+        <item name="colorAccent">@color/accentColor</item>
+
+        <!--self declare-->
+        <item name="text_color">@color/dark_text_color</item>
+        <item name="background_color">@color/dark_bg_color</item>
+        <item name="android:textColorSecondary">@color/dark_icon_tint_color</item>
+        <item name="text_hint_color">@color/dark_icon_tint_color</item>
+
+    </style>
+</resources>

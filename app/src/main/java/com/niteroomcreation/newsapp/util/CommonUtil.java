@@ -7,5 +7,6 @@ package com.niteroomcreation.newsapp.util;
 public class CommonUtil {
 
     public static final String THEME_KEY = "THEME_KEY".toLowerCase();
+    public static final String SHARED_PREF = "prefApp";
 
 }

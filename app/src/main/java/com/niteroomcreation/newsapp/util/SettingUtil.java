@@ -21,7 +21,7 @@ public class SettingUtil {
     public static final int THEME_DARK = 1;
 
     public SettingUtil(Context context) {
-        pref = context.getSharedPreferences("prefApp", Context.MODE_PRIVATE);
+        pref = context.getSharedPreferences(CommonUtil.SHARED_PREF, Context.MODE_PRIVATE);
         theme = pref.getInt(CommonUtil.THEME_KEY, 0);
     }
 
@@ -30,6 +30,9 @@ public class SettingUtil {
     }
 
     public void setTheme(int theme) {
+
+        LogHelper.e(TAG, theme, this.theme);
+
         this.theme = theme;
 
         SharedPreferences.Editor editor = pref.edit();

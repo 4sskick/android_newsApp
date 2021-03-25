@@ -7,6 +7,10 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.niteroomcreation.newsapp.R;
+import com.niteroomcreation.newsapp.util.LogHelper;
+import com.niteroomcreation.newsapp.util.SettingUtil;
+
 /**
  * Created by Septian Adi Wijaya on 24/03/2021.
  * please be sure to add credential if you use people's code
@@ -19,9 +23,16 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public Context context;
     private ProgressDialog progressLoading;
+    private SettingUtil settingUtil;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+
+
+        settingUtil = new SettingUtil(this);
+        setupTheme(settingUtil.getTheme());
+
         super.onCreate(savedInstanceState);
 
         onCreateInside();
@@ -32,10 +43,26 @@ public abstract class BaseActivity extends AppCompatActivity {
         initUI();
     }
 
-
     public abstract void onCreateInside();
 
     public abstract void initUI();
+
+    private void setupTheme(int theme) {
+
+        LogHelper.e(TAG, theme);
+
+        switch (theme) {
+            case SettingUtil.THEME_LIGHT:
+                setTheme(R.style.Theme_NewsApp);
+                break;
+
+            case SettingUtil.THEME_DARK:
+                setTheme(R.style.Theme_NewsApp_Dark);
+                break;
+            default:
+                setTheme(R.style.Theme_NewsApp);
+        }
+    }
 
     public void showProgressLoading(String title, String desc) {
         progressLoading.setTitle(title);

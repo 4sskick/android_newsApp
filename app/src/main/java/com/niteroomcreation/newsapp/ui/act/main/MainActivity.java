@@ -6,6 +6,7 @@ import androidx.navigation.ui.NavigationUI;
 import com.niteroomcreation.newsapp.R;
 import com.niteroomcreation.newsapp.databinding.AMainBinding;
 import com.niteroomcreation.newsapp.ui.BaseActivity;
+import com.niteroomcreation.newsapp.util.SettingUtil;
 
 public class MainActivity extends BaseActivity {
 
@@ -16,6 +17,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void onCreateInside() {
+
         binding = AMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
     }
