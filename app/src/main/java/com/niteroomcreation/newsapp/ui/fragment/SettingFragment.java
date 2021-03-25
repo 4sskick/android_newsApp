@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.niteroomcreation.newsapp.R;
 import com.niteroomcreation.newsapp.databinding.FSettingBinding;
 import com.niteroomcreation.newsapp.ui.BaseFragment;
 

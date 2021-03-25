@@ -7,9 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 
-import com.niteroomcreation.newsapp.R;
 import com.niteroomcreation.newsapp.databinding.FNewsBinding;
 import com.niteroomcreation.newsapp.ui.BaseFragment;
 
@@ -25,7 +23,6 @@ public class NewsFragment extends BaseFragment {
 
     @Override
     public View onInflateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
         binding = FNewsBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
