@@ -7,26 +7,24 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 
 import com.niteroomcreation.newsapp.R;
-import com.niteroomcreation.newsapp.databinding.FNewsBinding;
+import com.niteroomcreation.newsapp.databinding.FSettingBinding;
 import com.niteroomcreation.newsapp.ui.BaseFragment;
 
 /**
- * Created by Septian Adi Wijaya on 24/03/2021.
+ * Created by Septian Adi Wijaya on 25/03/2021.
  * please be sure to add credential if you use people's code
  */
-public class NewsFragment extends BaseFragment {
+public class SettingFragment extends BaseFragment {
 
-    public static final String TAG = NewsFragment.class.getSimpleName();
+    public static final String TAG = SettingFragment.class.getSimpleName();
 
-    private FNewsBinding binding;
+    private FSettingBinding binding;
 
     @Override
     public View onInflateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        binding = FNewsBinding.inflate(inflater, container, false);
+        binding = FSettingBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 

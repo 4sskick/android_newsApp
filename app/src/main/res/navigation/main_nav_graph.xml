@@ -3,30 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav_graph"
-    app:startDestination="@id/fragment_news_nav">
+    app:startDestination="@id/action_m_dashboard">
 
     <fragment
-        android:id="@+id/fragment_news_nav"
+        android:id="@+id/action_m_dashboard"
         android:name="com.niteroomcreation.newsapp.ui.fragment.NewsFragment"
         android:label="fragment_news_list"
         tools:layout="@layout/f_news" />
 
     <fragment
-        android:id="@+id/fragment_news_bookmark_nav"
+        android:id="@+id/action_m_bookmark"
         android:name="com.niteroomcreation.newsapp.ui.fragment.NewsFragment"
         android:label="fragment_news_bookmark"
         tools:layout="@layout/f_news" />
 
     <fragment
-        android:id="@+id/fragment_news_search_nav"
+        android:id="@+id/action_m_search"
         android:name="com.niteroomcreation.newsapp.ui.fragment.NewsFragment"
         android:label="fragment_news_search"
         tools:layout="@layout/f_news" />
 
     <fragment
-        android:id="@+id/fragment_news_setting_nav"
-        android:name="com.niteroomcreation.newsapp.ui.fragment.NewsFragment"
+        android:id="@+id/action_m_setting"
+        android:name="com.niteroomcreation.newsapp.ui.fragment.SettingFragment"
         android:label="fragment_news_setting"
-        tools:layout="@layout/f_news" />
+        tools:layout="@layout/f_setting" />
 
 </navigation>
