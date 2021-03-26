@@ -1,4 +1,4 @@
-package com.niteroomcreation.newsapp.view;
+package com.niteroomcreation.newsapp.view.adapter.viewholder;
 
 import android.view.View;
 

@@ -5,6 +5,7 @@ import android.widget.ImageView;
 import androidx.databinding.BindingAdapter;
 
 import com.bumptech.glide.Glide;
+import com.niteroomcreation.newsapp.R;
 
 /**
  * Created by Septian Adi Wijaya on 26/03/2021.
@@ -26,5 +27,30 @@ public class BindingUtil {
 
         // glide can make any image in a circular format with ease
         Glide.with(imageView.getContext()).load(url).circleCrop().into(imageView);
+    }
+
+    @BindingAdapter("set_background")
+    public static void setBackground(ImageView imageView, String color) {
+
+        switch (color) {
+            case "RED":
+                imageView.setBackgroundColor(imageView.getContext().getResources().getColor(R.color.red));
+                break;
+            case "BLACK":
+                imageView.setBackgroundColor(imageView.getContext().getResources().getColor(R.color.black));
+                break;
+            case "YELLOW":
+                imageView.setBackgroundColor(imageView.getContext().getResources().getColor(R.color.yellow));
+                break;
+            case "BLUE":
+                imageView.setBackgroundColor(imageView.getContext().getResources().getColor(R.color.blue));
+                break;
+            case "PURPLE":
+                imageView.setBackgroundColor(imageView.getContext().getResources().getColor(R.color.purple));
+                break;
+            default:
+                imageView.setBackgroundColor(imageView.getContext().getResources().getColor(R.color.red));
+        }
+
     }
 }
