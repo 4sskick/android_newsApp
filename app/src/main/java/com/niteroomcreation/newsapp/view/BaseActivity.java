@@ -1,4 +1,4 @@
-package com.niteroomcreation.newsapp.ui;
+package com.niteroomcreation.newsapp.view;
 
 import android.app.ProgressDialog;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package com.niteroomcreation.newsapp.ui.fragment;
+package com.niteroomcreation.newsapp.view.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.niteroomcreation.newsapp.databinding.FNewsBinding;
-import com.niteroomcreation.newsapp.ui.BaseFragment;
+import com.niteroomcreation.newsapp.view.BaseFragment;
 
 /**
  * Created by Septian Adi Wijaya on 24/03/2021.

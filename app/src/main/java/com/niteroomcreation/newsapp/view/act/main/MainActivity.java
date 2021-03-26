@@ -1,12 +1,11 @@
-package com.niteroomcreation.newsapp.ui.act.main;
+package com.niteroomcreation.newsapp.view.act.main;
 
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 
 import com.niteroomcreation.newsapp.R;
 import com.niteroomcreation.newsapp.databinding.AMainBinding;
-import com.niteroomcreation.newsapp.ui.BaseActivity;
-import com.niteroomcreation.newsapp.util.SettingUtil;
+import com.niteroomcreation.newsapp.view.BaseActivity;
 
 public class MainActivity extends BaseActivity {
 

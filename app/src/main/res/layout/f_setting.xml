@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="24dp"
     android:background="?attr/background_color"
-    tools:context=".ui.fragment.SettingFragment">
+    tools:context=".view.fragment.SettingFragment">
 
 
     <TextView

@@ -1,10 +1,9 @@
-package com.niteroomcreation.newsapp.ui.fragment;
+package com.niteroomcreation.newsapp.view.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
@@ -12,7 +11,7 @@ import androidx.annotation.Nullable;
 
 import com.niteroomcreation.newsapp.R;
 import com.niteroomcreation.newsapp.databinding.FSettingBinding;
-import com.niteroomcreation.newsapp.ui.BaseFragment;
+import com.niteroomcreation.newsapp.view.BaseFragment;
 import com.niteroomcreation.newsapp.util.LogHelper;
 import com.niteroomcreation.newsapp.util.SettingUtil;
 

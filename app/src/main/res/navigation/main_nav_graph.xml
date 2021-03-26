@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/action_m_dashboard"
-        android:name="com.niteroomcreation.newsapp.ui.fragment.NewsFragment"
+        android:name="com.niteroomcreation.newsapp.view.fragment.NewsFragment"
         android:label="fragment_news_list"
         tools:layout="@layout/f_news" />
 
     <fragment
         android:id="@+id/action_m_bookmark"
-        android:name="com.niteroomcreation.newsapp.ui.fragment.NewsFragment"
+        android:name="com.niteroomcreation.newsapp.view.fragment.NewsFragment"
         android:label="fragment_news_bookmark"
         tools:layout="@layout/f_news" />
 
     <fragment
         android:id="@+id/action_m_search"
-        android:name="com.niteroomcreation.newsapp.ui.fragment.NewsFragment"
+        android:name="com.niteroomcreation.newsapp.view.fragment.NewsFragment"
         android:label="fragment_news_search"
         tools:layout="@layout/f_news" />
 
     <fragment
         android:id="@+id/action_m_setting"
-        android:name="com.niteroomcreation.newsapp.ui.fragment.SettingFragment"
+        android:name="com.niteroomcreation.newsapp.view.fragment.SettingFragment"
         android:label="fragment_news_setting"
         tools:layout="@layout/f_setting" />
 
