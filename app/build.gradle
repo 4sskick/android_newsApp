@@ -28,7 +28,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    buildFeatures{
+    buildFeatures {
         dataBinding true
         viewBinding true
     }
@@ -37,6 +37,7 @@ android {
 dependencies {
 
     def navigation_version = "2.3.0"
+    def glide_version = "4.11.0"
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
@@ -46,6 +47,10 @@ dependencies {
 
     //joda time
     implementation "joda-time:joda-time:2.10.10"
+
+    // glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
 
     //jetpack
     implementation "androidx.navigation:navigation-fragment:$navigation_version"
