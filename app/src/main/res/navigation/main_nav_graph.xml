@@ -7,21 +7,31 @@
 
     <fragment
         android:id="@+id/action_m_dashboard"
-        android:name="com.niteroomcreation.newsapp.view.fragment.NewsFragment"
+        android:name="com.niteroomcreation.newsapp.view.fragment.EmptyFragment"
         android:label="fragment_news_list"
         tools:layout="@layout/f_news" />
 
     <fragment
         android:id="@+id/action_m_bookmark"
-        android:name="com.niteroomcreation.newsapp.view.fragment.NewsFragment"
+        android:name="com.niteroomcreation.newsapp.view.fragment.EmptyFragment"
         android:label="fragment_news_bookmark"
-        tools:layout="@layout/f_news" />
+        tools:layout="@layout/f_news">
+
+        <argument
+            android:name="m_key"
+            app:argType="string" />
+    </fragment>
 
     <fragment
         android:id="@+id/action_m_search"
-        android:name="com.niteroomcreation.newsapp.view.fragment.NewsFragment"
+        android:name="com.niteroomcreation.newsapp.view.fragment.EmptyFragment"
         android:label="fragment_news_search"
-        tools:layout="@layout/f_news" />
+        tools:layout="@layout/f_news">
+
+        <argument
+            android:name="m_key"
+            app:argType="string" />
+    </fragment>
 
     <fragment
         android:id="@+id/action_m_setting"
