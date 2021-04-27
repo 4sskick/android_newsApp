@@ -27,7 +27,7 @@ public class NewsAdapter extends ListAdapter<NewsModel, BaseViewHolder> {
     private static final int VIEWTYPE_TEXT = 0;
     private static final int VIEWTYPE_IMAGE = 1;
 
-    protected NewsAdapter(@NonNull DiffUtil.ItemCallback<NewsModel> diffCallback) {
+    public NewsAdapter(@NonNull DiffUtil.ItemCallback<NewsModel> diffCallback) {
         super(diffCallback);
     }
 

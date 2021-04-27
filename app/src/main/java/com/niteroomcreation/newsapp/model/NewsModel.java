@@ -26,7 +26,16 @@ public class NewsModel {
     }
 
     //fake date used
-    public NewsModel(String title, String content, String userName, String newsImage, String userImage, String bgNewsColor, int viewType) {
+    public NewsModel(int id
+            , String title
+            , String content
+            , String userName
+            , String newsImage
+            , String userImage
+            , String bgNewsColor
+            , int viewType) {
+
+        this.id = id;
         this.title = title;
         this.content = content;
         this.userName = userName;
