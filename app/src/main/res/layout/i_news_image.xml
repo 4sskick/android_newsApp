@@ -10,11 +10,15 @@
             name="NewsImageType"
             type="com.niteroomcreation.newsapp.model.NewsModel" />
 
+        <variable
+            name="callback"
+            type="com.niteroomcreation.newsapp.util.ItemViewClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp">
+        android:layout_height="250dp"
+        android:onClick="@{()->callback.onItemClicked(NewsImageType)}">
 
         <ImageView
             android:id="@+id/item_news_img_newsimg"

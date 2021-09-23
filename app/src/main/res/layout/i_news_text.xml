@@ -9,12 +9,17 @@
             name="NewsTextType"
             type="com.niteroomcreation.newsapp.model.NewsModel" />
 
+        <variable
+            name="callback"
+            type="com.niteroomcreation.newsapp.util.ItemViewClickListener" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="?attr/background_color">
+        android:background="?attr/background_color"
+        android:onClick="@{()->callback.onItemClicked(NewsTextType)}">
 
 
         <TextView

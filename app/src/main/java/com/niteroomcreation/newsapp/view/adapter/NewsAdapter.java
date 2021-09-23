@@ -12,6 +12,7 @@ import com.niteroomcreation.newsapp.R;
 import com.niteroomcreation.newsapp.databinding.INewsImageBinding;
 import com.niteroomcreation.newsapp.databinding.INewsTextBinding;
 import com.niteroomcreation.newsapp.model.NewsModel;
+import com.niteroomcreation.newsapp.util.ItemViewClickListener;
 import com.niteroomcreation.newsapp.view.adapter.viewholder.BaseViewHolder;
 import com.niteroomcreation.newsapp.view.adapter.viewholder.ImageViewHolder;
 import com.niteroomcreation.newsapp.view.adapter.viewholder.TextViewHolder;
@@ -27,8 +28,12 @@ public class NewsAdapter extends ListAdapter<NewsModel, BaseViewHolder> {
     private static final int VIEWTYPE_TEXT = 0;
     private static final int VIEWTYPE_IMAGE = 1;
 
-    public NewsAdapter(@NonNull DiffUtil.ItemCallback<NewsModel> diffCallback) {
+    private ItemViewClickListener<NewsModel> mListener;
+
+    public NewsAdapter(@NonNull DiffUtil.ItemCallback<NewsModel> diffCallback, ItemViewClickListener<NewsModel> mListener) {
         super(diffCallback);
+
+        this.mListener = mListener;
     }
 
     @Override
@@ -41,17 +46,14 @@ public class NewsAdapter extends ListAdapter<NewsModel, BaseViewHolder> {
     public BaseViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         switch (viewType) {
-            case VIEWTYPE_TEXT:
-                INewsTextBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.i_news_text, parent, false);
-                return new TextViewHolder(binding);
-
             case VIEWTYPE_IMAGE:
                 INewsImageBinding bindingImg = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.i_news_image, parent, false);
-                return new ImageViewHolder(bindingImg);
+                return new ImageViewHolder(bindingImg,mListener);
 
+            case VIEWTYPE_TEXT:
             default:
                 INewsTextBinding bindingDefault = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.i_news_text, parent, false);
-                return new TextViewHolder(bindingDefault);
+                return new TextViewHolder(bindingDefault, mListener);
 
         }
 

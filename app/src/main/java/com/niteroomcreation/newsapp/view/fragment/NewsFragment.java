@@ -13,7 +13,10 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.niteroomcreation.newsapp.databinding.FNewsBinding;
+import com.niteroomcreation.newsapp.model.NewsModel;
 import com.niteroomcreation.newsapp.model.mock.NewsModelMock;
+import com.niteroomcreation.newsapp.util.ItemViewClickListener;
+import com.niteroomcreation.newsapp.util.LogHelper;
 import com.niteroomcreation.newsapp.util.NewsDiffUtilCallback;
 import com.niteroomcreation.newsapp.view.BaseFragment;
 import com.niteroomcreation.newsapp.view.adapter.NewsAdapter;
@@ -22,7 +25,9 @@ import com.niteroomcreation.newsapp.view.adapter.NewsAdapter;
  * Created by Septian Adi Wijaya on 24/03/2021.
  * please be sure to add credential if you use people's code
  */
-public class NewsFragment extends BaseFragment {
+public class NewsFragment
+        extends BaseFragment
+        implements ItemViewClickListener<NewsModel> {
 
     public static final String TAG = NewsFragment.class.getSimpleName();
 
@@ -38,7 +43,7 @@ public class NewsFragment extends BaseFragment {
     @Override
     public void initUI() {
 
-        adapter = new NewsAdapter(new NewsDiffUtilCallback());
+        adapter = new NewsAdapter(new NewsDiffUtilCallback(), this);
 
         binding.newsRv.setLayoutManager(new StaggeredGridLayoutManager(2, RecyclerView.VERTICAL));
         binding.newsRv.setAdapter(adapter);
@@ -78,5 +83,11 @@ public class NewsFragment extends BaseFragment {
     @Override
     public void destroyUI() {
         binding = null;
+    }
+
+
+    @Override
+    public void onItemClicked(NewsModel model) {
+        LogHelper.e(TAG, model);
     }
 }
