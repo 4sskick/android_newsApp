@@ -1,4 +1,4 @@
-package com.niteroomcreation.newsapp.view.fragment;
+package com.niteroomcreation.newsapp.view.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

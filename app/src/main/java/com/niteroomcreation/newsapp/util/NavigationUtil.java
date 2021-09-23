@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.niteroomcreation.newsapp.model.NewsModel;
-import com.niteroomcreation.newsapp.view.act.detail.DetailActivity;
+import com.niteroomcreation.newsapp.view.ui.detail.DetailActivity;
 
 /**
  * Created by Septian Adi Wijaya on 23/09/2021.

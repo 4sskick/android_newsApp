@@ -105,7 +105,7 @@
                 android:layout_marginRight="16dp"
                 android:text="@{NewsItemData.content}"
                 android:textColor="?attr/text_color"
-                android:textSize="36sp"
+                android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/details_username_date" />

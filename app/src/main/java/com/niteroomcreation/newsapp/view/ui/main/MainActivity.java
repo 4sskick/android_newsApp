@@ -1,4 +1,4 @@
-package com.niteroomcreation.newsapp.view.act.main;
+package com.niteroomcreation.newsapp.view.ui.main;
 
 import android.os.Bundle;
 import android.view.MenuItem;

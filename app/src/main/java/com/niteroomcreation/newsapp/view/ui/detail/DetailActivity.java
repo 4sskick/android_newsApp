@@ -1,4 +1,4 @@
-package com.niteroomcreation.newsapp.view.act.detail;
+package com.niteroomcreation.newsapp.view.ui.detail;
 
 import android.widget.Toast;
 
