@@ -2,6 +2,8 @@ package com.niteroomcreation.newsapp.view.ui.detail;
 
 import android.widget.Toast;
 
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.niteroomcreation.newsapp.databinding.ADetailBinding;
 import com.niteroomcreation.newsapp.view.BaseActivity;
 
@@ -19,10 +21,24 @@ public class DetailActivity extends BaseActivity {
     public void onCreateInside() {
         binding = ADetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        binding.detailsSwipe.setRefreshing(true);
+        binding.detailsSwipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                loadData();
+                binding.detailsSwipe.setRefreshing(false);
+            }
+        });
     }
 
     @Override
     public void initUI() {
+        loadData();
+        binding.detailsSwipe.setRefreshing(false);
+    }
+
+    private void loadData(){
         if (getIntent() != null && getIntent().getExtras() != null) {
             binding.setNewsItemData(getIntent().getExtras().getParcelable("model"));
         } else {

@@ -35,11 +35,10 @@ public abstract class BaseActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
 
-        onCreateInside();
-
         context = getContext();
         progressLoading = new ProgressDialog(this);
 
+        onCreateInside();
         initUI();
     }
 
