@@ -1,5 +1,6 @@
 package com.niteroomcreation.newsapp.view.ui.news;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -15,11 +16,14 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.niteroomcreation.newsapp.databinding.FNewsBinding;
 import com.niteroomcreation.newsapp.model.NewsModel;
 import com.niteroomcreation.newsapp.model.mock.NewsModelMock;
+import com.niteroomcreation.newsapp.util.ItemEventsListener;
 import com.niteroomcreation.newsapp.util.ItemViewClickListener;
 import com.niteroomcreation.newsapp.util.NavigationUtil;
 import com.niteroomcreation.newsapp.util.NewsDiffUtilCallback;
 import com.niteroomcreation.newsapp.view.BaseFragment;
 import com.niteroomcreation.newsapp.view.adapter.NewsAdapter;
+
+import java.util.List;
 
 /**
  * Created by Septian Adi Wijaya on 24/03/2021.
@@ -33,6 +37,7 @@ public class NewsFragment
 
     private FNewsBinding binding;
     private NewsAdapter adapter;
+    private ItemEventsListener<List<NewsModel>> mEventListener;
 
     @Override
     public View onInflateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -50,7 +55,11 @@ public class NewsFragment
 
         //fake data
         NewsModelMock fake = new NewsModelMock();
-        adapter.submitList(fake.getFakeListNews());
+        List<NewsModel> data = fake.getFakeListNews();
+        adapter.submitList(data);
+
+        //invoke into listener
+        mEventListener.onDataLoaded(data);
 
         binding.newsRvSwipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -62,7 +71,9 @@ public class NewsFragment
                     public void run() {
                         //update data list news
                         //by generating new updated list
-                        adapter.submitList(fake.getRandomSortListNews());
+                        List<NewsModel> dataRefreshed = fake.getRandomSortListNews();
+                        adapter.submitList(dataRefreshed);
+
                         binding.newsRvSwipe.setRefreshing(false);
 
                         //notify user update data success
@@ -74,6 +85,8 @@ public class NewsFragment
                                 binding.newsRv.smoothScrollToPosition(positionStart);
                             }
                         });
+
+                        mEventListener.onDataLoaded(dataRefreshed);
                     }
                 }, 1200);
             }
@@ -85,6 +98,15 @@ public class NewsFragment
         binding = null;
     }
 
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+
+        if (context instanceof ItemEventsListener) {
+            mEventListener = (ItemEventsListener<List<NewsModel>>) context;
+        } else
+            throw new RuntimeException(context.getClass() + " doesn't implement ItemEventsListener");
+    }
 
     @Override
     public void onItemClicked(NewsModel model) {

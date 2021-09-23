@@ -30,9 +30,9 @@ public class NewsAdapter extends ListAdapter<NewsModel, BaseViewHolder> {
 
     private ItemViewClickListener<NewsModel> mListener;
 
-    public NewsAdapter(@NonNull DiffUtil.ItemCallback<NewsModel> diffCallback, ItemViewClickListener<NewsModel> mListener) {
+    public NewsAdapter(@NonNull DiffUtil.ItemCallback<NewsModel> diffCallback
+            , ItemViewClickListener<NewsModel> mListener) {
         super(diffCallback);
-
         this.mListener = mListener;
     }
 
