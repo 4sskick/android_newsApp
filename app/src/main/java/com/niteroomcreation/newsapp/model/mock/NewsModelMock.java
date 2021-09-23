@@ -5,10 +5,7 @@ package com.niteroomcreation.newsapp.model.mock;
  * please make sure to use credit when using people code
  **/
 
-import android.os.Build;
 import android.util.Log;
-
-import androidx.annotation.RequiresApi;
 
 import com.niteroomcreation.newsapp.model.NewsModel;
 
@@ -24,7 +21,9 @@ import java.util.Random;
  * "id" : 0,
  * "title" : "Design A Simple UI Screen in Flare",
  * "itemType" : 1,
- * "newsContent" : "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with: The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.",
+ * "newsContent" : "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of
+ * Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with: The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A
+ * practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.",
  * "newsImg" : "https://2.bp.blogspot.com/-ddZ2Tt8EOeo/XxtDIkHWgDI/AAAAAAAAAn0/vG13Vw5zoXU5fy_sHQ_7lW6PQz1UEXocACK4BGAYYCw/s1600/news5.PNG",
  * "userImg" : "https://2.bp.blogspot.com/-6EcFUPmzExo/XxtD9BbEO4I/AAAAAAAAAo0/n-AxAZrAVLQBbzjcKhkIOHtSLixVUz0lgCK4BGAYYCw/s400/user3.png",
  * "username" : "Invision Studio",
@@ -84,7 +83,8 @@ public class NewsModelMock {
                     , getRandomNewsImage()
                     , getRandomUserImage()
                     , getRandomBgColor()
-                    , generateViewType(index));
+                    , generateViewType(index)
+                    , generateFav());
 
             data.add(item);
 
@@ -183,7 +183,9 @@ public class NewsModelMock {
 
 
     // News content for testing
-    public static final String LOREM_TEXT = "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with: The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.";
+    public static final String LOREM_TEXT = "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to " +
+            "have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with: The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that " +
+            "doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.";
 
     // news background colors
     static final String[] lstColors = {"RED", "YELLOW", "BLACK", "PURPLE"};
@@ -256,6 +258,10 @@ public class NewsModelMock {
         return new Date();
     }
 
+    //generate random boolean value fav
+    private boolean generateFav() {
+        return new Random().nextBoolean();
+    }
 
     // generate a viewtype based on the index and the list size
     // this specify the view grid system of the format of the news system list

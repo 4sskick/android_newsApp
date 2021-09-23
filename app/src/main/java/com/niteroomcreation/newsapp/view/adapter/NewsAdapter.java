@@ -48,7 +48,7 @@ public class NewsAdapter extends ListAdapter<NewsModel, BaseViewHolder> {
         switch (viewType) {
             case VIEWTYPE_IMAGE:
                 INewsImageBinding bindingImg = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.i_news_image, parent, false);
-                return new ImageViewHolder(bindingImg,mListener);
+                return new ImageViewHolder(bindingImg, mListener);
 
             case VIEWTYPE_TEXT:
             default:

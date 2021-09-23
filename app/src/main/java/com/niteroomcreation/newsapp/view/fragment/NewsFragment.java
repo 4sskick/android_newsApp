@@ -17,6 +17,7 @@ import com.niteroomcreation.newsapp.model.NewsModel;
 import com.niteroomcreation.newsapp.model.mock.NewsModelMock;
 import com.niteroomcreation.newsapp.util.ItemViewClickListener;
 import com.niteroomcreation.newsapp.util.LogHelper;
+import com.niteroomcreation.newsapp.util.NavigationUtil;
 import com.niteroomcreation.newsapp.util.NewsDiffUtilCallback;
 import com.niteroomcreation.newsapp.view.BaseFragment;
 import com.niteroomcreation.newsapp.view.adapter.NewsAdapter;
@@ -88,6 +89,6 @@ public class NewsFragment
 
     @Override
     public void onItemClicked(NewsModel model) {
-        LogHelper.e(TAG, model);
+        NavigationUtil.gotoDetail(getActivity(), model);
     }
 }
