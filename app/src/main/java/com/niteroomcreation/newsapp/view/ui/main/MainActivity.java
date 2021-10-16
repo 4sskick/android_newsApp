@@ -66,7 +66,7 @@ public class MainActivity
 
                         // TODO: 23/09/2021  putParcelableArrayList still on problem to passed
                         b.putString("m_key", "BOOKMARK");
-                        b.putParcelableArrayList("model", dataBookmarked);
+                        b.putParcelableArray("model", dataBookmarked.toArray(new NewsModel[]{}));
 
                         navHostFragment.getNavController().navigate(R.id.action_m_bookmark, b);
                         return true;
