@@ -9,9 +9,10 @@
             name="NewsItemData"
             type="com.niteroomcreation.newsapp.model.NewsModel" />
 
-
+        <variable
+            name="callback"
+            type="com.niteroomcreation.newsapp.util.ItemViewClickListener" />
     </data>
-
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/details_swipe"
@@ -96,6 +97,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
+                    android:onClick="@{()->callback.onItemClicked(NewsItemData)}"
                     android:src="@drawable/ic_bookmarks"
                     app:layout_constraintBottom_toBottomOf="@+id/details_username_date"
                     app:layout_constraintStart_toEndOf="@+id/details_username_date"

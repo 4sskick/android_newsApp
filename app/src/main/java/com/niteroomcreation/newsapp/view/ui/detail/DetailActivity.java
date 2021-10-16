@@ -1,17 +1,19 @@
 package com.niteroomcreation.newsapp.view.ui.detail;
 
-import android.widget.Toast;
-
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.niteroomcreation.newsapp.databinding.ADetailBinding;
+import com.niteroomcreation.newsapp.model.NewsModel;
+import com.niteroomcreation.newsapp.util.ItemViewClickListener;
 import com.niteroomcreation.newsapp.view.BaseActivity;
 
 /**
  * Created by Septian Adi Wijaya on 23/09/2021.
  * please be sure to add credential if you use people's code
  */
-public class DetailActivity extends BaseActivity {
+public class DetailActivity
+        extends BaseActivity
+        implements ItemViewClickListener<NewsModel> {
 
     public static final String TAG = DetailActivity.class.getSimpleName();
 
@@ -30,6 +32,7 @@ public class DetailActivity extends BaseActivity {
                 binding.detailsSwipe.setRefreshing(false);
             }
         });
+        binding.setCallback(this);
     }
 
     @Override
@@ -38,12 +41,18 @@ public class DetailActivity extends BaseActivity {
         binding.detailsSwipe.setRefreshing(false);
     }
 
-    private void loadData(){
+    private void loadData() {
         if (getIntent() != null && getIntent().getExtras() != null) {
             binding.setNewsItemData(getIntent().getExtras().getParcelable("model"));
         } else {
-            Toast.makeText(this, "Model class doesn't found", Toast.LENGTH_SHORT).show();
+            showMessage("Model class doesn't found");
             finish();
         }
+    }
+
+    @Override
+    public void onItemClicked(NewsModel model) {
+        model.setFav(!model.isFav());
+        binding.setNewsItemData(model);
     }
 }

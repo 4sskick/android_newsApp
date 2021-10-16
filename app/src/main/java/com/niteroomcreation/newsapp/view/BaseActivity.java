@@ -3,6 +3,7 @@ package com.niteroomcreation.newsapp.view;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     public Context context;
     private ProgressDialog progressLoading;
     private SettingUtil settingUtil;
+    private Toast mToast;
 
 
     @Override
@@ -35,8 +37,9 @@ public abstract class BaseActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
 
-        context = getContext();
+        context = this;
         progressLoading = new ProgressDialog(this);
+        mToast = Toast.makeText(context, "null", Toast.LENGTH_LONG);
 
         onCreateInside();
         initUI();
@@ -61,6 +64,12 @@ public abstract class BaseActivity extends AppCompatActivity {
             default:
                 setTheme(R.style.Theme_NewsApp);
         }
+    }
+
+    public void showMessage(String msg) {
+        mToast.setText(msg);
+        mToast.setDuration(Toast.LENGTH_LONG);
+        mToast.show();
     }
 
     public void showProgressLoading(String title, String desc) {
