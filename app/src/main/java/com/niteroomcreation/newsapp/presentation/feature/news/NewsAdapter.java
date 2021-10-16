@@ -1,4 +1,4 @@
-package com.niteroomcreation.newsapp.view.adapter;
+package com.niteroomcreation.newsapp.presentation.feature.news;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -9,13 +9,13 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 
 import com.niteroomcreation.newsapp.R;
+import com.niteroomcreation.newsapp.data.datasource.NewsModel;
 import com.niteroomcreation.newsapp.databinding.INewsImageBinding;
 import com.niteroomcreation.newsapp.databinding.INewsTextBinding;
-import com.niteroomcreation.newsapp.model.NewsModel;
-import com.niteroomcreation.newsapp.util.ItemViewClickListener;
-import com.niteroomcreation.newsapp.view.adapter.viewholder.BaseViewHolder;
-import com.niteroomcreation.newsapp.view.adapter.viewholder.ImageViewHolder;
-import com.niteroomcreation.newsapp.view.adapter.viewholder.TextViewHolder;
+import com.niteroomcreation.newsapp.presentation.base.BaseViewHolder;
+import com.niteroomcreation.newsapp.presentation.feature.news.viewholder.ImageViewHolder;
+import com.niteroomcreation.newsapp.presentation.feature.news.viewholder.TextViewHolder;
+import com.niteroomcreation.newsapp.util.listener.ItemViewClickListener;
 
 /**
  * Created by Septian Adi Wijaya on 26/03/2021.

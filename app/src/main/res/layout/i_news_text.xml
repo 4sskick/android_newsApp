@@ -7,11 +7,11 @@
 
         <variable
             name="NewsTextType"
-            type="com.niteroomcreation.newsapp.model.NewsModel" />
+            type="com.niteroomcreation.newsapp.data.datasource.NewsModel" />
 
         <variable
             name="callback"
-            type="com.niteroomcreation.newsapp.util.ItemViewClickListener" />
+            type="com.niteroomcreation.newsapp.util.listener.ItemViewClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"

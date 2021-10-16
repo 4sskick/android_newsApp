@@ -1,4 +1,4 @@
-package com.niteroomcreation.newsapp.view.ui.news;
+package com.niteroomcreation.newsapp.presentation.feature.news;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -14,14 +14,13 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.niteroomcreation.newsapp.databinding.FNewsBinding;
-import com.niteroomcreation.newsapp.model.NewsModel;
-import com.niteroomcreation.newsapp.model.mock.NewsModelMock;
-import com.niteroomcreation.newsapp.util.ItemEventsListener;
-import com.niteroomcreation.newsapp.util.ItemViewClickListener;
+import com.niteroomcreation.newsapp.data.datasource.NewsModel;
+import com.niteroomcreation.newsapp.data.datasource.mock.NewsModelMock;
+import com.niteroomcreation.newsapp.util.listener.ItemEventsListener;
+import com.niteroomcreation.newsapp.util.listener.ItemViewClickListener;
 import com.niteroomcreation.newsapp.util.NavigationUtil;
 import com.niteroomcreation.newsapp.util.NewsDiffUtilCallback;
-import com.niteroomcreation.newsapp.view.BaseFragment;
-import com.niteroomcreation.newsapp.view.adapter.NewsAdapter;
+import com.niteroomcreation.newsapp.presentation.base.BaseFragment;
 
 import java.util.List;
 

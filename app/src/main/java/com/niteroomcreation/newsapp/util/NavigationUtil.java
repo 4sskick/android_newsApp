@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.niteroomcreation.newsapp.model.NewsModel;
-import com.niteroomcreation.newsapp.view.ui.detail.DetailActivity;
+import com.niteroomcreation.newsapp.data.datasource.NewsModel;
+import com.niteroomcreation.newsapp.presentation.feature.detail.DetailActivity;
 
 /**
  * Created by Septian Adi Wijaya on 23/09/2021.

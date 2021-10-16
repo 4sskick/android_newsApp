@@ -3,7 +3,7 @@ package com.niteroomcreation.newsapp.util;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 
-import com.niteroomcreation.newsapp.model.NewsModel;
+import com.niteroomcreation.newsapp.data.datasource.NewsModel;
 
 /**
  * Created by monta on 27/04/21

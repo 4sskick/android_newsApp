@@ -1,4 +1,4 @@
-package com.niteroomcreation.newsapp.view.ui.main;
+package com.niteroomcreation.newsapp.presentation.feature.main;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -10,10 +10,10 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.niteroomcreation.newsapp.R;
 import com.niteroomcreation.newsapp.databinding.AMainBinding;
-import com.niteroomcreation.newsapp.model.NewsModel;
-import com.niteroomcreation.newsapp.util.ItemEventsListener;
+import com.niteroomcreation.newsapp.data.datasource.NewsModel;
+import com.niteroomcreation.newsapp.util.listener.ItemEventsListener;
 import com.niteroomcreation.newsapp.util.LogHelper;
-import com.niteroomcreation.newsapp.view.BaseActivity;
+import com.niteroomcreation.newsapp.presentation.base.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.niteroomcreation.newsapp.model.mock;
+package com.niteroomcreation.newsapp.data.datasource.mock;
 
 /**
  * Created by monta on 27/04/21
@@ -7,7 +7,7 @@ package com.niteroomcreation.newsapp.model.mock;
 
 import android.util.Log;
 
-import com.niteroomcreation.newsapp.model.NewsModel;
+import com.niteroomcreation.newsapp.data.datasource.NewsModel;
 
 import java.util.ArrayList;
 import java.util.Collections;

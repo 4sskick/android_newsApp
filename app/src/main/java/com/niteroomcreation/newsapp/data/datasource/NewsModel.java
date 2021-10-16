@@ -1,4 +1,4 @@
-package com.niteroomcreation.newsapp.model;
+package com.niteroomcreation.newsapp.data.datasource;
 
 import android.os.Parcel;
 import android.os.Parcelable;

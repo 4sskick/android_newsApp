@@ -1,11 +1,11 @@
-package com.niteroomcreation.newsapp.view.ui.detail;
+package com.niteroomcreation.newsapp.presentation.feature.detail;
 
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.niteroomcreation.newsapp.databinding.ADetailBinding;
-import com.niteroomcreation.newsapp.model.NewsModel;
-import com.niteroomcreation.newsapp.util.ItemViewClickListener;
-import com.niteroomcreation.newsapp.view.BaseActivity;
+import com.niteroomcreation.newsapp.data.datasource.NewsModel;
+import com.niteroomcreation.newsapp.util.listener.ItemViewClickListener;
+import com.niteroomcreation.newsapp.presentation.base.BaseActivity;
 
 /**
  * Created by Septian Adi Wijaya on 23/09/2021.

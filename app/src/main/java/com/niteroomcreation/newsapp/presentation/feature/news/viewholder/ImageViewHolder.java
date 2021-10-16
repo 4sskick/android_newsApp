@@ -1,10 +1,11 @@
-package com.niteroomcreation.newsapp.view.adapter.viewholder;
+package com.niteroomcreation.newsapp.presentation.feature.news.viewholder;
 
 import androidx.annotation.NonNull;
 
 import com.niteroomcreation.newsapp.databinding.INewsImageBinding;
-import com.niteroomcreation.newsapp.model.NewsModel;
-import com.niteroomcreation.newsapp.util.ItemViewClickListener;
+import com.niteroomcreation.newsapp.data.datasource.NewsModel;
+import com.niteroomcreation.newsapp.presentation.base.BaseViewHolder;
+import com.niteroomcreation.newsapp.util.listener.ItemViewClickListener;
 
 /**
  * Created by Septian Adi Wijaya on 26/03/2021.

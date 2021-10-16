@@ -1,11 +1,11 @@
-package com.niteroomcreation.newsapp.view.adapter.viewholder;
+package com.niteroomcreation.newsapp.presentation.base;
 
 import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.niteroomcreation.newsapp.model.NewsModel;
+import com.niteroomcreation.newsapp.data.datasource.NewsModel;
 
 /**
  * Created by Septian Adi Wijaya on 26/03/2021.

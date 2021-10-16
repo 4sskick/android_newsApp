@@ -1,4 +1,4 @@
-package com.niteroomcreation.newsapp.util;
+package com.niteroomcreation.newsapp.util.listener;
 
 /**
  * Created by Septian Adi Wijaya on 23/09/2021.

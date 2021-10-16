@@ -1,4 +1,4 @@
-package com.niteroomcreation.newsapp.view.ui.bookmark;
+package com.niteroomcreation.newsapp.presentation.feature.bookmark;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,10 +12,10 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.niteroomcreation.newsapp.databinding.FBookmarkBinding;
-import com.niteroomcreation.newsapp.model.NewsModel;
+import com.niteroomcreation.newsapp.data.datasource.NewsModel;
 import com.niteroomcreation.newsapp.util.NewsDiffUtilCallback;
-import com.niteroomcreation.newsapp.view.BaseFragment;
-import com.niteroomcreation.newsapp.view.adapter.NewsAdapter;
+import com.niteroomcreation.newsapp.presentation.base.BaseFragment;
+import com.niteroomcreation.newsapp.presentation.feature.news.NewsAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

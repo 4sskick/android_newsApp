@@ -1,4 +1,4 @@
-package com.niteroomcreation.newsapp.view.ui.setting;
+package com.niteroomcreation.newsapp.presentation.feature.setting;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 
 import com.niteroomcreation.newsapp.R;
 import com.niteroomcreation.newsapp.databinding.FSettingBinding;
-import com.niteroomcreation.newsapp.view.BaseFragment;
+import com.niteroomcreation.newsapp.presentation.base.BaseFragment;
 import com.niteroomcreation.newsapp.util.LogHelper;
 import com.niteroomcreation.newsapp.util.SettingUtil;
 

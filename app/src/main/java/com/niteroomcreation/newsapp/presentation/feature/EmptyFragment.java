@@ -1,4 +1,4 @@
-package com.niteroomcreation.newsapp.view.ui;
+package com.niteroomcreation.newsapp.presentation.feature;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 
 import com.niteroomcreation.newsapp.databinding.FEmptyBinding;
 import com.niteroomcreation.newsapp.util.LogHelper;
-import com.niteroomcreation.newsapp.view.BaseFragment;
+import com.niteroomcreation.newsapp.presentation.base.BaseFragment;
 
 /**
  * Created by monta on 27/04/21

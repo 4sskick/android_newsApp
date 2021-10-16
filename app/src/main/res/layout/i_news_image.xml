@@ -8,11 +8,11 @@
 
         <variable
             name="NewsImageType"
-            type="com.niteroomcreation.newsapp.model.NewsModel" />
+            type="com.niteroomcreation.newsapp.data.datasource.NewsModel" />
 
         <variable
             name="callback"
-            type="com.niteroomcreation.newsapp.util.ItemViewClickListener" />
+            type="com.niteroomcreation.newsapp.util.listener.ItemViewClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
