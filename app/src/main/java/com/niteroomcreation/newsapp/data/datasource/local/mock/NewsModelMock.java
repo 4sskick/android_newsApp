@@ -1,4 +1,4 @@
-package com.niteroomcreation.newsapp.data.datasource.mock;
+package com.niteroomcreation.newsapp.data.datasource.local.mock;
 
 /**
  * Created by monta on 27/04/21

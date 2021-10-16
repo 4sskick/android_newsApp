@@ -13,7 +13,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.niteroomcreation.newsapp.databinding.FBookmarkBinding;
 import com.niteroomcreation.newsapp.data.datasource.NewsModel;
-import com.niteroomcreation.newsapp.util.NewsDiffUtilCallback;
+import com.niteroomcreation.newsapp.util.CallbackDiffUtil;
 import com.niteroomcreation.newsapp.presentation.base.BaseFragment;
 import com.niteroomcreation.newsapp.presentation.feature.news.NewsAdapter;
 
@@ -41,7 +41,7 @@ public class BookmarkFragment extends BaseFragment {
     public void initUI() {
 
         if (getArguments() != null && getArguments().getParcelableArray("model") != null) {
-            adapter = new NewsAdapter(new NewsDiffUtilCallback(), null);
+            adapter = new NewsAdapter(new CallbackDiffUtil(), null);
 
             binding.bookmarkRv.setLayoutManager(new StaggeredGridLayoutManager(2, RecyclerView.VERTICAL));
             binding.bookmarkRv.setAdapter(adapter);

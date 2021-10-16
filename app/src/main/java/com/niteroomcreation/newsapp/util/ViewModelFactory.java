@@ -14,7 +14,6 @@ public class ViewModelFactory extends ViewModelProvider.NewInstanceFactory {
 
     private static volatile ViewModelFactory INSTANCE;
 
-
     public static ViewModelFactory getInstance(Context context) {
         if (INSTANCE == null) {
             synchronized (ViewModelFactory.class) {

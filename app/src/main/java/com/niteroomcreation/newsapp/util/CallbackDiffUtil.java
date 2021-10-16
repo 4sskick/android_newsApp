@@ -9,9 +9,9 @@ import com.niteroomcreation.newsapp.data.datasource.NewsModel;
  * Created by monta on 27/04/21
  * please make sure to use credit when using people code
  **/
-public class NewsDiffUtilCallback extends DiffUtil.ItemCallback<NewsModel> {
+public class CallbackDiffUtil extends DiffUtil.ItemCallback<NewsModel> {
 
-    public static final String TAG = NewsDiffUtilCallback.class.getSimpleName();
+    public static final String TAG = CallbackDiffUtil.class.getSimpleName();
 
     @Override
     public boolean areItemsTheSame(@NonNull NewsModel oldItem, @NonNull NewsModel newItem) {

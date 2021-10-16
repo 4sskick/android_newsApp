@@ -15,11 +15,11 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.niteroomcreation.newsapp.databinding.FNewsBinding;
 import com.niteroomcreation.newsapp.data.datasource.NewsModel;
-import com.niteroomcreation.newsapp.data.datasource.mock.NewsModelMock;
+import com.niteroomcreation.newsapp.data.datasource.local.mock.NewsModelMock;
 import com.niteroomcreation.newsapp.util.listener.ItemEventsListener;
 import com.niteroomcreation.newsapp.util.listener.ItemViewClickListener;
 import com.niteroomcreation.newsapp.util.NavigationUtil;
-import com.niteroomcreation.newsapp.util.NewsDiffUtilCallback;
+import com.niteroomcreation.newsapp.util.CallbackDiffUtil;
 import com.niteroomcreation.newsapp.presentation.base.BaseFragment;
 
 import java.util.List;
@@ -47,7 +47,7 @@ public class NewsFragment
     @Override
     public void initUI() {
 
-        adapter = new NewsAdapter(new NewsDiffUtilCallback(), this);
+        adapter = new NewsAdapter(new CallbackDiffUtil(), this);
 
         binding.newsRv.setLayoutManager(new StaggeredGridLayoutManager(2, RecyclerView.VERTICAL));
         binding.newsRv.setAdapter(adapter);
